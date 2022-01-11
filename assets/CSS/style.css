@@ -46,4 +46,40 @@ h1{
     margin-top: 10px;
 }
 
+input[type='range']{
+    -webkit-appearance: none;
+    appearance: none;
+   
+    width: 11rem;
+    height: 0.3em;
+    border-radius: 5px;
+    background-color: #5c5c5c;
+    outline: none;
 
+    transform: translateY(-100%);
+}
+
+#barra::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 0 7px 0.1rem;
+}
+
+.botoes{
+    margin-top: 20px;
+    font-size: 36px;
+}
+
+ion-icon{
+    cursor: pointer;
+    padding: 20px;
+}
+
+ion-icon:hover{
+    background: rgba(255, 255, 255, 0.267);
+    padding: 25px;
+    border-radius: 60%;
+}
