@@ -11,13 +11,13 @@
     <div class="card br">
       <h1>🌴 Bahamasfy 🌴</h1>
       <div class="musica">
-        <img class="br" src="./assets/images/cria.jpg" id="foto-msc" />
+        <img class="br" src="./assets/images/cria.jpg" id="fotoMsc" />
         <h2 id="title-msc">Titulo da Musica</h2>
-        <p id="artista">Atista</p>
+        <p id="artista">Artista</p>
       </div>
       <div class="player">
         <audio id="musica">
-          <source src="./assets/cria.mp3" />
+          <source class="srcMsc" src="./assets/cria.mp3" />
         </audio>
         <h4>
           <span id="durante">00:00 </span>
@@ -31,7 +31,7 @@
             id="icon-play"
             onclick="play()"
           ></ion-icon>
-          <ion-icon name="play-skip-forward-outline" id="icon=prox"></ion-icon>
+          <ion-icon name="play-skip-forward-outline" id="icon-prox" onclick="prox()"></ion-icon>
         </div>
       </div>
     </div>
