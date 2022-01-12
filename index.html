@@ -1,25 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tocador de musica</title>
-    <link rel="stylesheet" href="./assets/CSS/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./assets/CSS/style.css" />
+  </head>
+  <body>
     <div class="card br">
-        <h1>🌴 Bahamas Player 🌴</h1>
-        <div class="musica">
-            <img class="br" src="./assets/images/cria.jpg">
-            <h2>Titulo da Musica</h2>
+      <h1>🌴 Bahamasfy 🌴</h1>
+      <div class="musica">
+        <img class="br" src="./assets/images/cria.jpg" id="foto-msc" />
+        <h2 id="title-msc">Titulo da Musica</h2>
+        <p id="artista">Atista</p>
+      </div>
+      <div class="player">
+        <audio id="musica">
+          <source src="./assets/cria.mp3" />
+        </audio>
+        <h4>
+          <span id="durante">00:00 </span>
+          <input type="range" id="barra" />
+          <span id="duracao"> 00:00</span>
+        </h4>
+        <div class="botoes">
+          <ion-icon name="play-skip-back-outline" id="icon-voltar"></ion-icon>
+          <ion-icon
+            name="play-outline"
+            id="icon-play"
+            onclick="play()"
+          ></ion-icon>
+          <ion-icon name="play-skip-forward-outline" id="icon=prox"></ion-icon>
         </div>
-        <div class="player">
-            <audio controls>
-                <source src="./assets/cria.mp3">
-            </audio>
-        </div>
+      </div>
     </div>
-<script src="./assets/JavaScript/script.js"></script>
-</body>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./assets/JavaScript/script.js"></script>
+  </body>
 </html>
