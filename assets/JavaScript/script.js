@@ -1,5 +1,9 @@
 
 
+
+let artistaMusic = document.getElementById("artista");
+let titleMusic = document.getElementById("title-msc");
+
 let musica = document.getElementById("musica");
 let musicas = [
     
@@ -18,4 +22,11 @@ let musicas = [
 
     function play() {
         musica.play();
+
+        titleMusic.innerHTML = "";
+        titleMusic.innerHTML = musicas[0].title;
+        artistaMusic.innerHTML = "";
+        artistaMusic.innerHTML = musicas[0].artist;
+
+        
 }
