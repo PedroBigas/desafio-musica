@@ -14,7 +14,7 @@ let TimingMusic = document.getElementById("barraTempo");
 let tempoatualMusica = document.getElementById("durante");
 let durationTotal = document.getElementById("duracao");
 
-let iconPlay = document.getElementsByTagName("ion-icon")[1];
+let iconPlay = document.getElementsByTagName("ion-icon")[2];
 
 let IndexMsc = 0;
 let musicas = [
