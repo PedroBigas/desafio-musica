@@ -19,7 +19,7 @@ body{
     color: white;
     margin: auto;
     max-width: 450px;
-    max-height: 500px;
+    max-height: 550px;
     background-image: radial-gradient( circle farthest-corner at 24.1% 68.8%,  rgba(50,50,50,1) 0%, rgba(0,0,0,1) 99.4% );
     padding: 20px;
     box-shadow: 0 20px 20px -5px black;
@@ -59,6 +59,21 @@ input[type='range']{
 
     transform: translateY(-100%);
 }
+.player ion-icon{
+    padding-right: 5px;
+}
+#volume{
+    width: 120px;
+    height: 0.2em;
+}
+#volume::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 0 7px 0.1rem #557C55;
+}
 
 #barraTempo::-webkit-slider-thumb{
     -webkit-appearance: none;
@@ -74,12 +89,12 @@ input[type='range']{
     font-size: 36px;
 }
 
-ion-icon{
+.botoes ion-icon{
     cursor: pointer;
     padding: 5px;
 }
 
-ion-icon:hover{
+.botoes ion-icon:hover{
     background: rgba(255, 255, 255, 0.267);
     padding: 5px;
     border-radius: 60%;
