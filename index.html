@@ -11,7 +11,7 @@
     <div class="card br">
       <h1>🌴 Bahamasfy 🌴</h1>
       <div class="musica">
-        <img class="br" src="./assets/images/cria.jpg" id="fotoMsc" />
+        <img class="br" src="./assets/images/bahamas.jpeg" id="fotoMsc" />
         <h2 id="title-msc">Titulo da Musica</h2>
         <p id="artista">Artista</p>
       </div>
@@ -21,11 +21,11 @@
         </audio>
         <h4>
           <span id="durante">00:00 </span>
-          <input type="range" id="barra" />
+          <input type="range" id="barraTempo" ontouchend="SetTiming()" onclick="setTiming()" min="0" value="0" />
           <span id="duracao"> 00:00</span>
         </h4>
         <div class="botoes">
-          <ion-icon name="play-skip-back-outline" id="iconVoltar"></ion-icon>
+          <ion-icon name="play-skip-back-outline" id="iconVoltar" onclick="voltar()"></ion-icon>
           <ion-icon
             name="play-outline"
             id="iconPlay"

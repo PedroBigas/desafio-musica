@@ -60,7 +60,7 @@ input[type='range']{
     transform: translateY(-100%);
 }
 
-#barra::-webkit-slider-thumb{
+#barraTempo::-webkit-slider-thumb{
     -webkit-appearance: none;
     width: 13px;
     height: 13px;
