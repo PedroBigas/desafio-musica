@@ -21,7 +21,7 @@
         </audio>
         <h4>
           <span id="durante">00:00 </span>
-          <input type="range" id="barraTempo" ontouchend="SetTiming()" onclick="setTiming()" min="0" value="0" />
+          <input id="barraTempo" ontouchend="SetTiming()" onclick="setTiming()" type="range" min="0" value="0" />
           <span id="duracao"> 00:00</span>
         </h4>
         <div class="botoes">
@@ -32,6 +32,7 @@
             onclick="play()"
           ></ion-icon>
           <ion-icon name="play-skip-forward-outline" id="iconProx" onclick="prox()"></ion-icon>
+          
         </div>
       </div>
     </div>

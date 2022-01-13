@@ -83,6 +83,7 @@ musica.onloadeddata = function(){
         attDados();
         mudarAtt(iconPlay,"name","pause-outline");
         mudarAtt(iconPlay,"onclick","pause()");
+        musica.play();
 
             setInterval(() => {
                 TimingMusic.value = Math.round(musica.currentTime);
@@ -140,13 +141,15 @@ musica.onloadeddata = function(){
         srcFoto.setAttribute('src', musicas[IndexMsc].srcImg);
 }
 
-    function SetTiming() {
+    function setTiming() {
         musica.currentTime = TimingMusic.value;
+
             if(musica.paused == false){
                 musica.play();
             }
-        musica.play();
 }
+
+    
 
     function formatacao(secs, format) {
         let hr = Math.floor(secs / 3600);
