@@ -47,11 +47,7 @@ let musicas = [
     },
 
 ];
-    function toggle() {
-        //<ion-icon name="pause-outline"></ion-icon>
-        iconPlay.setAttribute("name","pause-outline");
-      
-}
+
     function pause() {
         musica.pause();
 }
@@ -77,9 +73,8 @@ let musicas = [
                 IndexMsc = 0;
         }
 
-        
-        srcMsc.setAttribute('src', musicas[IndexMsc].srcAudio);
-        srcFoto.setAttribute('src', musicas[IndexMsc].srcImg);
+        mudarAtt(srcMsc,"src",musicas[IndexMsc].srcAudio);
+        mudarAtt(srcFoto,"src",musicas[IndexMsc].srcImg);
 
         
         play();
