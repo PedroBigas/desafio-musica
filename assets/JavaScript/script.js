@@ -83,7 +83,6 @@ musica.onloadeddata = function(){
         attDados();
         mudarAtt(iconPlay,"name","pause-outline");
         mudarAtt(iconPlay,"onclick","pause()");
-        musica.play();
 
             setInterval(() => {
                 TimingMusic.value = Math.round(musica.currentTime);
