@@ -6,10 +6,12 @@ let titleMusic = document.getElementById("title-msc");
 
 
 let musica = document.getElementById("musica");
+let iconeVolume = document.getElementsByTagName("ion-icon")[0];
 
 let srcMsc = document.getElementsByTagName("source")[0];
 let srcFoto = document.getElementsByTagName("img")[0];
 
+let VolumeControl = document.getElementById("volume");
 let TimingMusic = document.getElementById("barraTempo");
 let tempoatualMusica = document.getElementById("durante");
 let durationTotal = document.getElementById("duracao");
@@ -83,7 +85,7 @@ musica.onloadeddata = function(){
         attDados();
         mudarAtt(iconPlay,"name","pause-outline");
         mudarAtt(iconPlay,"onclick","pause()");
-
+        volumeMsc();
             setInterval(() => {
                 TimingMusic.value = Math.round(musica.currentTime);
                 tempoatualMusica.innerHTML = formatacao(Math.round(musica.currentTime));
@@ -145,11 +147,33 @@ musica.onloadeddata = function(){
 
             if(musica.paused == false){
                 musica.play();
-            }
+        }
 }
 
-    
+    function mutar() {
+        musica.volume = 0;
+        // <ion-icon name="volume-mute-outline"></ion-icon>
+        mudarAtt(iconeVolume,"name","volume-mute-outline"); 
+        mudarAtt(iconeVolume,"onclick","desmutar()")
+}
 
+    function desmutar() {
+        musica.volume = 0.20;
+        mudarAtt(iconeVolume,"name","volume-high-outline");
+        mudarAtt(iconeVolume,"onclick","mutar()") 
+
+}
+
+    function volumeMsc() {
+        musica.volume = VolumeControl.value / 100;
+
+        if (musica.volume == 0) {
+            mudarAtt(iconeVolume,"name","volume-mute-outline");
+        } else {
+            mudarAtt(iconeVolume,"name","volume-high-outline");
+        }
+}
+    
     function formatacao(secs, format) {
         let hr = Math.floor(secs / 3600);
         let min = Math.floor((secs - (hr * 3600))/60);
@@ -162,4 +186,4 @@ musica.onloadeddata = function(){
                 sec = "0" + sec;
             }
             return min + ":" + sec;
-    }
+}
